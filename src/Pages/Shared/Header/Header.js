@@ -13,7 +13,7 @@ const Header = () => {
     }
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 shadow-md mb-10">
             <div className="flex-1">
                 <Link to='/' className="btn btn-ghost normal-case text-xl">Super-Bazar</Link>
             </div>
