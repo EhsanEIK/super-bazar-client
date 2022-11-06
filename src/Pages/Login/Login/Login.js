@@ -31,8 +31,8 @@ const Login = () => {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        // localStorage.setItem('my-shop-token', data.token);
-                        localStorage.setItem('my-shop-token', data);
+                        // localStorage.setItem('super-bazar-token', data.token);
+                        localStorage.setItem('super-bazar-token', data);
                         toast.success("Login Successful");
                         form.reset();
                         navigate(from, { replace: true });

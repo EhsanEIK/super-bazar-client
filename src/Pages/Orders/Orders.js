@@ -7,13 +7,13 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import Order from './Order';
 
 const Orders = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logout, setLoading } = useContext(AuthContext);
 
     const [orders, setOrders] = useState([]);
     useEffect(() => {
         fetch(`https://super-bazar-server.vercel.app/orders?email=${user?.email}`, {
             headers: {
-                authorization: `Bearer ${localStorage.getItem('my-shop-token')}`
+                authorization: `Bearer ${localStorage.getItem('super-bazar-token')}`
             }
         })
             .then(res => res.json())
@@ -26,7 +26,7 @@ const Orders = () => {
             fetch(`https://super-bazar-server.vercel.app/orders/${id}`, {
                 method: "DELETE",
                 headers: {
-                    authorization: `Bearer ${localStorage.getItem('my-shop-token')}`
+                    authorization: `Bearer ${localStorage.getItem('super-bazar-token')}`
                 }
             })
                 .then(res => res.json())

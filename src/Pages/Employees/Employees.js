@@ -17,7 +17,7 @@ const Employees = () => {
     useEffect(() => {
         fetch(`https://super-bazar-server.vercel.app/employees?email=${user?.email}`, {
             headers: {
-                authorization: `Bearer ${localStorage.getItem('my-shop-token')}`
+                authorization: `Bearer ${localStorage.getItem('super-bazar-token')}`
             }
         })
             .then(res => {
@@ -38,7 +38,7 @@ const Employees = () => {
             fetch(`https://super-bazar-server.vercel.app/employees/${id}`, {
                 method: 'DELETE',
                 headers: {
-                    authorization: `Bearer ${localStorage.getItem('my-shop-token')}`
+                    authorization: `Bearer ${localStorage.getItem('super-bazar-token')}`
                 }
             })
                 .then(res => {

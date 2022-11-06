@@ -30,7 +30,7 @@ const Checkout = () => {
             method: "POST",
             headers: {
                 'content-type': 'application/json',
-                authorization: `Bearer ${localStorage.getItem('my-shop-token')}`
+                authorization: `Bearer ${localStorage.getItem('super-bazar-token')}`
             },
             body: JSON.stringify(order),
         })

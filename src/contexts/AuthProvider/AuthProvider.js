@@ -26,7 +26,7 @@ const AuthProvider = ({ children }) => {
 
     // logout
     const logout = () => {
-        localStorage.removeItem('my-shop-token');
+        localStorage.removeItem('super-bazar-token');
         setLoading(true);
         return signOut(auth);
     }
